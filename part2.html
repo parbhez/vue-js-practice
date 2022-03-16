@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Practice</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <script>
+        var myJson = {
+            name: "Masud Parbhez",
+            web: "WWW.mp.com",
+            skills: ["HTML", "CSS", "PHP", 'JS'],
+            friends: [{
+                name: 'Kona',
+                age: '20'
+            }, {
+                name: 'Rabita',
+                age: '24'
+            }, {
+                name: 'Naorin',
+                age: '25'
+            }, ]
+        };
+
+        console.log(myJson.skills[0]);
+
+
+        function start() {
+            console.log("Start");
+        }
+
+        function process(callback) {
+            setTimeout(function() {
+                console.log("Process");
+                callback();
+            }, 1000);
+
+        }
+
+        function finished() {
+            console.log('Finished');
+        }
+
+        start();
+        process(function() {
+            finished();
+        });
+    </script>
+
+</body>
+
+</html>
